@@ -16,6 +16,7 @@ public class Producto {
     public String cla;  //clima
     public String ren;  //region
     public String hum;  //humedad
+    public float tp; //tamañopromedio
     public int qh;      //quintales por hectarea
     
 }

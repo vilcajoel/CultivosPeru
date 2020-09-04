@@ -5,16 +5,23 @@
  */
 package Views;
 
+import Gestionador.Lista;
+import Gestionador.OperacionesProducto;
+import Gestionador.Producto;
+
 /**
  *
  * @author JoelVilca
  */
 public class Anadir extends javax.swing.JFrame {
+    Lista L = new Lista();
+    OperacionesProducto op = new OperacionesProducto();
 
     /**
      * Creates new form Home_Data
      */
     public Anadir() {
+    
         initComponents();
     }
 
@@ -29,7 +36,37 @@ public class Anadir extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        Panel1 = new javax.swing.JPanel();
+        E1 = new javax.swing.JLabel();
+        E2 = new javax.swing.JLabel();
+        E3 = new javax.swing.JLabel();
+        E4 = new javax.swing.JLabel();
+        E5 = new javax.swing.JLabel();
+        E6 = new javax.swing.JLabel();
+        E7 = new javax.swing.JLabel();
+        T1 = new javax.swing.JTextField();
+        T2 = new javax.swing.JTextField();
+        T3 = new javax.swing.JTextField();
+        T4 = new javax.swing.JTextField();
+        RB1 = new javax.swing.JRadioButton();
+        RB2 = new javax.swing.JRadioButton();
+        RB3 = new javax.swing.JRadioButton();
+        RB4 = new javax.swing.JRadioButton();
+        RB5 = new javax.swing.JRadioButton();
+        RB6 = new javax.swing.JRadioButton();
+        RB7 = new javax.swing.JRadioButton();
+        RB8 = new javax.swing.JRadioButton();
+        RB9 = new javax.swing.JRadioButton();
+        B1 = new javax.swing.JButton();
+        E8 = new javax.swing.JLabel();
+        CB1 = new javax.swing.JComboBox<>();
+        E9 = new javax.swing.JLabel();
+        E10 = new javax.swing.JLabel();
+        E11 = new javax.swing.JLabel();
+        E12 = new javax.swing.JLabel();
+        E13 = new javax.swing.JLabel();
+        E14 = new javax.swing.JLabel();
+        E15 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -49,7 +86,7 @@ public class Anadir extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(44, 44, 44)
                 .addComponent(jLabel15)
-                .addContainerGap(764, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -59,17 +96,242 @@ public class Anadir extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel2.setBackground(new java.awt.Color(51, 153, 0));
+        Panel1.setBackground(new java.awt.Color(51, 153, 0));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+        E1.setText("Codigo");
+
+        E2.setText("Nombre");
+
+        E3.setText("Tamaño promedio en metros (TP)");
+
+        E4.setText("Quintales por hectarea(QH)");
+
+        E5.setText("Clima");
+
+        E6.setText("Region");
+
+        E7.setText("Humedad");
+
+        T1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                T1ActionPerformed(evt);
+            }
+        });
+
+        T4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                T4ActionPerformed(evt);
+            }
+        });
+
+        RB1.setText("Tropical");
+        RB1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RB1ActionPerformed(evt);
+            }
+        });
+
+        RB2.setText("Seco");
+        RB2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RB2ActionPerformed(evt);
+            }
+        });
+
+        RB3.setText("Templado");
+        RB3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RB3ActionPerformed(evt);
+            }
+        });
+
+        RB4.setText("Costa");
+        RB4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RB4ActionPerformed(evt);
+            }
+        });
+
+        RB5.setText("Sierra");
+        RB5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RB5ActionPerformed(evt);
+            }
+        });
+
+        RB6.setText("Selva");
+        RB6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RB6ActionPerformed(evt);
+            }
+        });
+
+        RB7.setText("Baja");
+
+        RB8.setText("Media");
+
+        RB9.setText("Alta");
+
+        B1.setText("Adicionar");
+        B1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B1ActionPerformed(evt);
+            }
+        });
+
+        CB1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CB1ActionPerformed(evt);
+            }
+        });
+
+        E9.setText("Codigo");
+
+        E10.setText("Nombre");
+
+        E11.setText("TP");
+
+        E12.setText("QH");
+
+        E13.setText("Clima");
+
+        E14.setText("Region");
+
+        E15.setText("Humedad");
+
+        javax.swing.GroupLayout Panel1Layout = new javax.swing.GroupLayout(Panel1);
+        Panel1.setLayout(Panel1Layout);
+        Panel1Layout.setHorizontalGroup(
+            Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel1Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Panel1Layout.createSequentialGroup()
+                        .addComponent(B1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(E8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel1Layout.createSequentialGroup()
+                        .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(E4)
+                            .addComponent(E5)
+                            .addComponent(E7)
+                            .addComponent(E3)
+                            .addComponent(E1)
+                            .addComponent(E6))
+                        .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(Panel1Layout.createSequentialGroup()
+                                .addGap(38, 38, 38)
+                                .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(Panel1Layout.createSequentialGroup()
+                                        .addComponent(RB4)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(RB5)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(RB6))
+                                    .addGroup(Panel1Layout.createSequentialGroup()
+                                        .addComponent(RB1)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(RB2)
+                                        .addGap(23, 23, 23)
+                                        .addComponent(RB3))
+                                    .addGroup(Panel1Layout.createSequentialGroup()
+                                        .addComponent(RB7)
+                                        .addGap(27, 27, 27)
+                                        .addComponent(RB8)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(RB9)))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(Panel1Layout.createSequentialGroup()
+                                .addGap(50, 50, 50)
+                                .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(T4, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
+                                    .addComponent(T3)
+                                    .addComponent(T2, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(T1, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(32, 32, 32)
+                        .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(Panel1Layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(E9)
+                                .addGap(18, 18, 18)
+                                .addComponent(E2)
+                                .addGap(18, 18, 18)
+                                .addComponent(E13)
+                                .addGap(18, 18, 18)
+                                .addComponent(E14)
+                                .addGap(18, 18, 18)
+                                .addComponent(E15)
+                                .addGap(50, 50, 50)
+                                .addComponent(E12)
+                                .addGap(27, 27, 27)
+                                .addComponent(E11))
+                            .addComponent(CB1, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(9, 9, 9)))
+                .addContainerGap())
+            .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(Panel1Layout.createSequentialGroup()
+                    .addGap(139, 139, 139)
+                    .addComponent(E10)
+                    .addContainerGap(772, Short.MAX_VALUE)))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 445, Short.MAX_VALUE)
+        Panel1Layout.setVerticalGroup(
+            Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(E9)
+                    .addComponent(E2)
+                    .addComponent(E11)
+                    .addComponent(E12)
+                    .addComponent(E13)
+                    .addComponent(E14)
+                    .addComponent(E15))
+                .addGap(9, 9, 9)
+                .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(E1)
+                    .addComponent(T1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CB1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(T2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(E3)
+                    .addComponent(T3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(E4)
+                    .addComponent(T4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(E5)
+                    .addComponent(RB1)
+                    .addComponent(RB2)
+                    .addComponent(RB3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(E6)
+                    .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(RB4)
+                        .addComponent(RB5)
+                        .addComponent(RB6)))
+                .addGap(9, 9, 9)
+                .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(E7)
+                    .addComponent(RB7)
+                    .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(RB9)
+                        .addComponent(RB8)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
+                .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(B1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(E8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(80, 80, 80))
+            .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(Panel1Layout.createSequentialGroup()
+                    .addGap(75, 75, 75)
+                    .addComponent(E10)
+                    .addContainerGap(356, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -77,18 +339,98 @@ public class Anadir extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Panel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(Panel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void T1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_T1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_T1ActionPerformed
+
+    private void T4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_T4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_T4ActionPerformed
+
+    private void RB6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RB6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RB6ActionPerformed
+
+    private void RB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RB1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RB1ActionPerformed
+
+    private void RB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RB2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RB2ActionPerformed
+
+    private void RB3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RB3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RB3ActionPerformed
+
+    private void RB5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RB5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RB5ActionPerformed
+
+    private void RB4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RB4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RB4ActionPerformed
+
+    private void B1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B1ActionPerformed
+        // TODO add your handling code here:
+        String noe = T2.getText();  //nombre
+        String coe = T1.getText();  //codigo; 
+        float tp = Float.parseFloat(T3.getText());//tamaño promedio
+        int qh = Integer.parseInt(T4.getText());//Quintales por hectarea
+        String cla;//clima
+        String ren;//region
+        String hum;//humedad
+        if(RB1.isSelected()){
+            cla = RB1.getText();//clima
+        }else{
+            if(RB2.isSelected()){
+                cla = RB2.getText();//clima
+                    }else{
+                cla = RB3.getText();//clima
+            }
+        }
+        if(RB4.isSelected()){
+            ren = RB4.getText();//region
+        }else{
+            if(RB5.isSelected()){
+                ren = RB5.getText();//region
+            }else{
+                ren = RB6.getText();//region
+            }
+        }
+        if(RB7.isSelected()){
+            hum = RB7.getText();//humedad
+        }else{
+            if(RB8.isSelected()){
+                hum = RB8.getText();//humedad
+            }else{
+                hum = RB9.getText();//humedad
+            }
+        }
+        Producto P = op.CrearProducto(noe, coe, cla, ren, hum, qh, tp);
+        L.Adiciona(P);
+        String T01 = op.MostrarProducto(P);
+        String T02 = op.MostrarDatos(P);
+        E8.setText(T01);
+        CB1.addItem(T02);
+    }//GEN-LAST:event_B1ActionPerformed
+
+    private void CB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CB1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CB1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -127,8 +469,38 @@ public class Anadir extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton B1;
+    private javax.swing.JComboBox<String> CB1;
+    private javax.swing.JLabel E1;
+    private javax.swing.JLabel E10;
+    private javax.swing.JLabel E11;
+    private javax.swing.JLabel E12;
+    private javax.swing.JLabel E13;
+    private javax.swing.JLabel E14;
+    private javax.swing.JLabel E15;
+    private javax.swing.JLabel E2;
+    private javax.swing.JLabel E3;
+    private javax.swing.JLabel E4;
+    private javax.swing.JLabel E5;
+    private javax.swing.JLabel E6;
+    private javax.swing.JLabel E7;
+    private javax.swing.JLabel E8;
+    private javax.swing.JLabel E9;
+    private javax.swing.JPanel Panel1;
+    private javax.swing.JRadioButton RB1;
+    private javax.swing.JRadioButton RB2;
+    private javax.swing.JRadioButton RB3;
+    private javax.swing.JRadioButton RB4;
+    private javax.swing.JRadioButton RB5;
+    private javax.swing.JRadioButton RB6;
+    private javax.swing.JRadioButton RB7;
+    private javax.swing.JRadioButton RB8;
+    private javax.swing.JRadioButton RB9;
+    private javax.swing.JTextField T1;
+    private javax.swing.JTextField T2;
+    private javax.swing.JTextField T3;
+    private javax.swing.JTextField T4;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
